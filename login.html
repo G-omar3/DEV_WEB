@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="sinup_champ.php" method="POST">
+          <h1>Sign up</h1>
+          <div class="social-container">
+            <a href="login-facebook.php" class="social" aria-label="Sign up with Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="singup.php" class="social" aria-label="Sign up with Google"><i class="fab fa-google-plus-g"></i></a>
+            <a href="linkedin-login.php" class="social" aria-label="Sign up with LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" name="name" placeholder="Name" required autocomplete="name"/>
+          <input type="email" name="email" placeholder="Email" required autocomplete="email"/>
+          <input type="password" name="password" placeholder="Password" required autocomplete="new-password"/>
+          <select name="role" required style="background-color: #eee; border: none; padding: 12px 15px; margin: 8px 0; width: 100%;">
+            <option value="" disabled selected>Select your role</option>
+            <option value="admin">Admin</option>
+            <option value="student">Étudiant</option>
+            <option value="teacher">Enseignant</option>
+          </select>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="login_champ.php" method="POST">
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="login-facebook.php" class="social" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="login.php" class="social" aria-label="Sign in with Google"><i class="fab fa-google-plus-g"></i></a>
+            <a href="linkedin-login.php" class="social" aria-label="Sign in with LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" name="email" placeholder="Email" required autocomplete="email"/>
+          <input type="password" name="password" placeholder="Password" required autocomplete="current-password"/>
+          <a href="forgot_password.php">Forgot your password?</a>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn" type="button">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
